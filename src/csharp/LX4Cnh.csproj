@@ -1,0 +1,91 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\common.props" />
+
+  <PropertyGroup>
+    <Version>1.1.0</Version>
+    <BuildInfoVSSBE></BuildInfoVSSBE>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFrameworks>$(LX4CnhTFM)</TargetFrameworks>
+    <RootNamespace>net.r_eg.algorithms</RootNamespace>
+    <AssemblyName>LX4Cnh</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(LX4CnhSnk)</AssemblyOriginatorKeyFile>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <AnalysisMode>Default</AnalysisMode>
+    <NoWarn>1701;1702;CS1591;IDE1006</NoWarn>
+    <LangVersion>latest</LangVersion>
+    <DocumentationFile>$(OutputPath)$(AssemblyName).xml</DocumentationFile>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>LX4Cnh</PackageId>
+    <Copyright>Copyright (c) 2021  Denis Kuzmin &lt;x-3F@outlook.com&gt; github/3F</Copyright>
+    <Title>[ LX4Cnh for C# ] high-speed multiplications of 128-bit numbers</Title>
+    <Description>LX4Cnh for C#
+
+    LodgeX4CorrNoHigh (LX4Cnh) algorithm of the high-speed multiplications of 128-bit numbers (full range, 128 × 128).
+
+    ✔ Free and Open. MIT License. Fork! Star! Contribute! Share! Enjoy!
+    https://github.com/3F/LX4Cnh
+
+    =======================================
+    gnt /p:ngpackages="LX4Cnh/$(Version)"
+    ================== https://github.com/3F/GetNuTool
+
+    $(BuildInfoVSSBE)
+    </Description>
+    <PackageOwners>reg</PackageOwners>
+    <PackageProjectUrl>https://github.com/3F/LX4Cnh</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/3F/LX4Cnh</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>algorithm numbers bignumbers math multiplication calculation FNV1a128 dotnet speed opensource algorithms LodgeX4CorrNoHigh LX4Cnh</PackageTags>
+    <PackageReleaseNotes> changelog: https://github.com/3F/LX4Cnh/blob/master/changelog.txt </PackageReleaseNotes>
+    <Authors>github.com/3F/LX4Cnh</Authors>
+    <NeutralLanguage>en</NeutralLanguage>
+    <PackageLicenseFile>License.txt</PackageLicenseFile>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <IsNetCoreFamilyTarget>true</IsNetCoreFamilyTarget>
+    <IsNetCoreFamilyTarget Condition="$(TargetFramework.StartsWith('net4')) == 'true'">false</IsNetCoreFamilyTarget>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DefineConstants>DEBUG;TRACE;$(DefineConstants)</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' Or '$(Configuration)' == 'RCI' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <NoDefaultExcludes>true</NoDefaultExcludes> <!-- NU5119: ..\.version -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\License.txt" Pack="true" PackagePath="" />
+    <None Include="..\..\Readme.md" Pack="true" PackagePath="" />
+    <None Include="..\..\changelog.txt" Pack="true" PackagePath="" />
+    <None Include="..\..\.version" Pack="true" PackagePath="" />
+    <None Include="..\$(RootObjDir)\build-info.txt" Condition="Exists('..\$(RootObjDir)\build-info.txt')" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\$(LX4CnhEmbdOut)" Pack="true" PackagePath="tools\LX4Cnh.embd" />
+    <None Include="..\.tools\hMSBuild.bat" Pack="true" PackagePath="tools\" />
+    <None Include="..\.tools\gnt.bat" Pack="true" PackagePath="tools\" />
+  </ItemGroup>
+  
+</Project>

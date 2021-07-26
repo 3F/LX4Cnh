@@ -1,0 +1,1 @@
+TODO: Possible optimized implementations. Example for FNV-1a-128

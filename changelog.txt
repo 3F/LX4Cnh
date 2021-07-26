@@ -1,0 +1,25 @@
+- - - - - - - - - - - - - - - - - - - 
+LX4Cnh - https://github.com/3F/LX4Cnh
+- - - - - - - - - - - - - - - - - - - 
+
+
+[LX4Cnh for C# 1.1] 2021.??.??
+
+    * Initial public release.
+      https://github.com/3F/LX4Cnh
+      
+
+[LX4Cnh 1.0] 2021.07.01
+
+    * Initial public version.
+      LodgeX4CorrNoHigh (LX4Cnh) algorithm of the high-speed multiplications of 128-bit numbers (full range, 128 × 128).
+    
+
+[Sandbox] pre-release states
+
+    * 2021.06.15: First idea/redesign after 'MulLowNoCorrShifts' (MLnoCS) algo (128-bit x 16) https://twitter.com/github3F/status/1404187562592309256
+    * 2021.06.21: Logic formalization. Variations, calculations, and scaling.
+    * 2021.06.27: First draft implementation using .NET/C#.
+    * 2021.06.30: Final testing and optimizations for dotnet impl https://twitter.com/github3F/status/1410358979033813000
+    * 2021.07.01: First public open source version. https://github.com/3F
+    * 2021.07.17: Optimized .NET/C# implementation. 60Mid6x2 sync was simplified by calculation using full middle overflow.
