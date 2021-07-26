@@ -4,17 +4,9 @@
 Copyright (c) 2021  Denis Kuzmin <x-3F@outlook.com> github/3F
 ```
 
-[ [ ☕ ] ](https://3F.github.io/Donation/)
+[ [ ☕ ] ](https://3F.github.io/Donation/) [![License](https://img.shields.io/badge/License-MIT-74A5C2.svg)](https://github.com/3F/LX4Cnh/blob/master/License.txt)
 
 ✔ Free and Open. MIT License. *Fork! Star! Contribute! Share! Enjoy!*
-
-[![Build status](https://ci.appveyor.com/api/projects/status/q4rq4wd92bi735ga/branch/master?svg=true)](https://ci.appveyor.com/project/3Fs/lx4cnh/branch/master)
-[![release](https://img.shields.io/github/release/3F/LX4Cnh.svg)](https://github.com/3F/LX4Cnh/releases/latest)
-[![License](https://img.shields.io/badge/License-MIT-74A5C2.svg)](https://github.com/3F/LX4Cnh/blob/master/License.txt)
-[![NuGet package](https://img.shields.io/nuget/v/LX4Cnh.svg)](https://www.nuget.org/packages/LX4Cnh/) 
-[![Tests](https://img.shields.io/appveyor/tests/3Fs/lx4cnh/master.svg)](https://ci.appveyor.com/project/3Fs/lx4cnh/build/tests)
-
-[![Build history](https://buildstats.info/appveyor/chart/3Fs/lx4cnh?buildCount=15&includeBuildsFromPullRequest=true&showStats=true)](https://ci.appveyor.com/project/3Fs/lx4cnh/history)
 
 ### MLnoCS vs LX4Cnh
 
@@ -34,8 +26,15 @@ LX4Cnh optimized\*<sup>2</sup> | 128 × 128 | \*<sup>2</sup> less than ~ **0.86 
 ## Where is this used?
 
 * [Huid](https://github.com/3F/Huid) - A high-speed *FNV-1a-128* hash-based *UUID* implementation.
+    * https://twitter.com/github3F/status/1419045735807467520
 
 ## .NET implementation
+
+[![Build status](https://ci.appveyor.com/api/projects/status/q4rq4wd92bi735ga/branch/master?svg=true)](https://ci.appveyor.com/project/3Fs/lx4cnh/branch/master)
+[![NuGet package](https://img.shields.io/nuget/v/LX4Cnh.svg)](https://www.nuget.org/packages/LX4Cnh/) 
+[![Tests](https://img.shields.io/appveyor/tests/3Fs/lx4cnh/master.svg)](https://ci.appveyor.com/project/3Fs/lx4cnh/build/tests)
+
+[![Build history](https://buildstats.info/appveyor/chart/3Fs/lx4cnh?buildCount=15&includeBuildsFromPullRequest=true&showStats=true)](https://ci.appveyor.com/project/3Fs/lx4cnh/history)
 
 *LX4Cnh* class provides several ways of setting and getting numbers by using uint, ulong, or bytes array. Just play with available [Unit-Tests](src/tests/csharp/UnitTest/) and [Speed-Tests](src/tests/csharp/Benchmark).
 

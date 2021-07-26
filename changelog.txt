@@ -3,10 +3,12 @@ LX4Cnh - https://github.com/3F/LX4Cnh
 - - - - - - - - - - - - - - - - - - - 
 
 
-[LX4Cnh for C# 1.1] 2021.??.??
+[LX4Cnh for .NET 1.1] 2021.07.26
 
     * Initial public release.
       https://github.com/3F/LX4Cnh
+      
+      NOTE: An embeddable version can be found inside distributed packages (zip + nupkg).
       
 
 [LX4Cnh 1.0] 2021.07.01
