@@ -28,12 +28,11 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>LX4Cnh</PackageId>
     <Copyright>Copyright (c) 2021  Denis Kuzmin &lt;x-3F@outlook.com&gt; github/3F</Copyright>
-    <Title>[ LX4Cnh for C# ] high-speed multiplications of 128-bit numbers</Title>
-    <Description>LX4Cnh for C#
+    <Title>[ LX4Cnh for .NET ] high-speed multiplications of large numbers</Title>
+    <Description>LX4Cnh (LodgeX4CorrNoHigh) algorithm of the high-speed multiplication of large numbers.
+    Current LX4Cnh implementation for .NET provides up to 128 × 128 bits support.
 
-    LodgeX4CorrNoHigh (LX4Cnh) algorithm of the high-speed multiplications of 128-bit numbers (full range, 128 × 128).
-
-    ✔ Free and Open. MIT License. Fork! Star! Contribute! Share! Enjoy!
+    ✔ Free and Open. MIT License.
     https://github.com/3F/LX4Cnh
 
     =======================================
@@ -79,13 +78,12 @@
     <None Include="..\..\Readme.md" Pack="true" PackagePath="" />
     <None Include="..\..\changelog.txt" Pack="true" PackagePath="" />
     <None Include="..\..\.version" Pack="true" PackagePath="" />
-    <None Include="..\$(RootObjDir)\build-info.txt" Condition="Exists('..\$(RootObjDir)\build-info.txt')" Pack="true" PackagePath="" />
+    <None Include="..\$(RootObjDir)\build-info.txt" Condition="Exists('..\$(RootObjDir)\build-info.txt')" Pack="true" PackagePath="" Visible="false" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="..\$(LX4CnhEmbdOut)" Pack="true" PackagePath="tools\LX4Cnh.embd" />
-    <None Include="..\.tools\hMSBuild.bat" Pack="true" PackagePath="tools\" />
-    <None Include="..\.tools\gnt.bat" Pack="true" PackagePath="tools\" />
+    <None Include="..\.tools\gnt.bat" Pack="true" PackagePath="tools\" Visible="false" />
   </ItemGroup>
   
 </Project>

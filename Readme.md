@@ -1,20 +1,18 @@
-*LodgeX4CorrNoHigh* (LX4Cnh) algorithm of the high-speed multiplications of **128-bit** numbers (full range, 128 × 128).
+LX4Cnh (*LodgeX4CorrNoHigh*) algorithm of the high-speed multiplication of large numbers.<sup>[[0]](https://twitter.com/github3F/status/1410710079674982400)</sup>
 
 ```r
 Copyright (c) 2021  Denis Kuzmin <x-3F@outlook.com> github/3F
 ```
 
-[ [ ☕ ] ](https://3F.github.io/Donation/) [![License](https://img.shields.io/badge/License-MIT-74A5C2.svg)](https://github.com/3F/LX4Cnh/blob/master/License.txt)
-
-✔ Free and Open. MIT License. *Fork! Star! Contribute! Share! Enjoy!*
+[ [ <sub>@</sub> ☕ ] ](https://3F.github.io/Donation/) &nbsp;&nbsp; [![License](https://img.shields.io/badge/License-MIT-74A5C2.svg)](https://github.com/3F/LX4Cnh/blob/master/License.txt)
 
 ### MLnoCS vs LX4Cnh
 
 Algorithm | Maximum bits | One multiplication
 ----------|--------------|-------------------
-LX4Cnh    | 128 × 128    | less than ~ **4.3 ns** == 0.0000000043 sec
-[MLnoCS](https://github.com/3F/sandbox/tree/master/algorithms/MLnoCS)    | 128 × 16 (*<sup>1</sup>32) | less than ~ **0.31 ns** == 0.00000000031 sec
-LX4Cnh optimized\*<sup>2</sup> | 128 × 128 | \*<sup>2</sup> less than ~ **0.86 ns** == 0.00000000086 sec
+LX4Cnh    | 128+ × 128+  | less than ~ **4.3 ns** == 0.0000000043 sec
+[MLnoCS](https://github.com/3F/sandbox/tree/master/algorithms/MLnoCS)    | 128+ × 16 (*<sup>1</sup>32) | less than ~ **0.31 ns** == 0.00000000031 sec
+LX4Cnh optimized\*<sup>2</sup> | 128+ × 128+ | \*<sup>2</sup> less than ~ **0.86 ns** == 0.00000000086 sec
 
 * \*<sup>1</sup> - theoretically up to 128 x 32 with some correction.
 * \*<sup>2</sup> - The actual calculation using LX4Cnh can be a bit optimized such for FNV1a-128 implementation (find it in my repo):
@@ -25,10 +23,16 @@ LX4Cnh optimized\*<sup>2</sup> | 128 × 128 | \*<sup>2</sup> less than ~ **0.86 
 
 ## Where is this used?
 
-* [Huid](https://github.com/3F/Huid) - A high-speed *FNV-1a-128* hash-based *UUID* implementation.
+* [Huid](https://github.com/3F/Huid) - A high-speed *FNV-1a-128* hash-based **UUID** implementation.
     * https://twitter.com/github3F/status/1419045735807467520
 
+* [Fnv1a128](https://github.com/3F/Fnv1a128) - Non-cryptographic hash function. *FNV-1a*. 「 128-bit 」 implementation.
+
 ## .NET implementation
+
+✔ Free and Open. MIT License. *Fork! Star! Contribute! Share! Enjoy!*
+
+###  **128-bit** numbers (full range, 128 × 128)
 
 [![Build status](https://ci.appveyor.com/api/projects/status/q4rq4wd92bi735ga/branch/master?svg=true)](https://ci.appveyor.com/project/3Fs/lx4cnh/branch/master)
 [![NuGet package](https://img.shields.io/nuget/v/LX4Cnh.svg)](https://www.nuget.org/packages/LX4Cnh/) 
@@ -40,7 +44,7 @@ LX4Cnh optimized\*<sup>2</sup> | 128 × 128 | \*<sup>2</sup> less than ~ **0.86 
 
 [![](/img/benchmark.png)](https://twitter.com/github3F/status/1410358979033813000)
 
-### Examples
+#### Examples
 
 For example, using ulong (UInt64)
 
@@ -59,7 +63,7 @@ ulong high = LX4Cnh.Multiply
 // = 0xACBBE8EAB60C77E249B25D708366091E
 ```
 
-### Embeddable superfast version
+#### Embeddable superfast version
 
 To reduce the amount of unnecessary stack manipulations (ldloca.s/ldarg.. etc), meet an *embeddable* version.
 
